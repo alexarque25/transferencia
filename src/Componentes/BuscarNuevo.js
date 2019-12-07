@@ -492,7 +492,7 @@ class BuscarNuevo extends React.Component {
                         this.setState({
                             buscarPendiente: false
                         });
-                        swal("No hay pendientes por asignación", " ", "info")
+                        swal("No existe en ese rango de fecha", " ", "info")
                     }
                 })
                 .catch((error) => {
