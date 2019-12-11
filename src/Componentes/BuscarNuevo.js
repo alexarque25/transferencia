@@ -35,6 +35,7 @@ class BuscarNuevo extends React.Component {
             ObjAsignación: [],
 
             objPendienteAsignacion: [],
+            objTransferencia: [],
 
             buscarRecAlum: false,
             buscarRec: false,
@@ -400,6 +401,7 @@ class BuscarNuevo extends React.Component {
                 apePat: '',
                 apeMat: '',
                 nombre: '',
+                observacion: '',
             })
 
             fetch(CONFIG + '/recaudaciones/listarPendientes/' + fechaInicio + '/' + fechaFin)/*PONER PARAMETROS LAS FECHAS Y LISTO*/
@@ -420,6 +422,7 @@ class BuscarNuevo extends React.Component {
                             id_rec: '',
                             numero: '',
                             idAlum: '',
+                            observacion: '',
                             moneda: '',
                             importe: '',
                             estado: '',
@@ -442,6 +445,7 @@ class BuscarNuevo extends React.Component {
                             listadoRec.id_rec = pendienteAsignacion[i].id_rec;
                             listadoRec.numero = pendienteAsignacion[i].numero;
                             listadoRec.idAlum = pendienteAsignacion[i].id_alum;
+                            listadoRec.observacion = pendienteAsignacion[i].observacion;
                             listadoRec.moneda = 'SOL';
                             listadoRec.importe = 'S/' + pendienteAsignacion[i].importe;
                             listadoRec.estado = pendiente_estado;
@@ -453,6 +457,7 @@ class BuscarNuevo extends React.Component {
                             listadoRec.apeNom = pendienteAsignacion[i].apeNom;
                             listadoRec.concepto = pendienteAsignacion[i].concepto;
                             listadoRec.fecha = pendienteAsignacion[i].fecha;
+                            listadoRec.observacion = pendienteAsignacion[i].observacion;
                             listadoRec.id_rec = pendienteAsignacion[i].id_rec;
                             listadoRec.numero = pendienteAsignacion[i].numero;
                             listadoRec.idAlum = pendienteAsignacion[i].id_alum;
@@ -467,6 +472,7 @@ class BuscarNuevo extends React.Component {
                             listadoRec.apeNom = pendienteAsignacion[i].apeNom;
                             listadoRec.concepto = pendienteAsignacion[i].concepto;
                             listadoRec.fecha = pendienteAsignacion[i].fecha;
+                            listadoRec.observacion = pendienteAsignacion[i].observacion;
                             listadoRec.id_rec = pendienteAsignacion[i].id_rec;
                             listadoRec.numero = pendienteAsignacion[i].numero;
                             listadoRec.idAlum = pendienteAsignacion[i].id_alum;
@@ -532,6 +538,7 @@ class BuscarNuevo extends React.Component {
                 apePat: '',
                 apeMat: '',
                 nombre: '',
+                observacion: '',
             })
 
             fetch(CONFIG + '/recaudaciones/listarPendientes/' + fechaInicio + '/' + fechaFin)/*PONER PARAMETROS LAS FECHAS Y LISTO*/
@@ -966,7 +973,7 @@ class BuscarNuevo extends React.Component {
 
                         {this.state.buscarPendiente ? (
                             <div>
-                                <AR_Transferencia listPendienteAsignacion={this.state.objPendienteAsignacion} />
+                                <AR_PendienteAsignacion listPendienteAsignacion={this.state.objPendienteAsignacion} />
                             </div>
                         ) : (null)}
                     </div>
@@ -1186,6 +1193,7 @@ class BuscarNuevo extends React.Component {
                     codAlumno: '',
                     programa: '',
                     siglaProg: '',
+                    observacion: '',
                 }
             });
         } else if (state_moneda == '113') {
@@ -1201,6 +1209,7 @@ class BuscarNuevo extends React.Component {
                     codAlumno: '',
                     programa: '',
                     siglaProg: '',
+                    observacion: '',
                 }
             });
         } else {
@@ -1216,6 +1225,7 @@ class BuscarNuevo extends React.Component {
                     codAlumno: '',
                     programa: '',
                     siglaProg: '',
+                    observacion: '',
                 }
             });
         }
