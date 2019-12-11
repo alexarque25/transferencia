@@ -35,7 +35,6 @@ class BuscarNuevo extends React.Component {
             ObjAsignación: [],
 
             objPendienteAsignacion: [],
-            objTransferencia: [],
             objObservacion: [],
             buscarRecAlum: false,
             buscarRec: false,
@@ -989,7 +988,7 @@ class BuscarNuevo extends React.Component {
 
                         {this.state.buscarPendiente ? (
                             <div>
-                                <AR_Transferencia listTransferencia={this.state.objTransferencia} />
+                                <AR_Transferencia listTransferencia={this.state.objObservacion} />
                             </div>
                         ) : (null)}
                     </div>
