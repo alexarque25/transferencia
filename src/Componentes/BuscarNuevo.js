@@ -566,6 +566,8 @@ class BuscarNuevo extends React.Component {
                 .then((Observacion) => {
                     console.log("---Observacion---");
                     console.log(Observacion);
+                    console.log(fechaFin);
+                    console.log(fechaInicio);
 
 
                     var lista = [];
