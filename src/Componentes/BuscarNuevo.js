@@ -66,6 +66,7 @@ class BuscarNuevo extends React.Component {
                 codAlum: '',
                 idProg: '',
                 siglaPrograma: '',
+                observacion: '',
             },
 
             estado: false,
