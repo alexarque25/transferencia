@@ -9,7 +9,7 @@ class AR_Transferencia extends React.Component {
         super(props);
 
         this.state = {
-            objTransferencia: this.props.listTransferencia,
+            objObservacion: this.props.listTransferencia,
         }
     }
 

@@ -566,7 +566,7 @@ class BuscarNuevo extends React.Component {
 
                     var lista = [];
                     for (let i = 0; i < Observacion.length; i++) {
-                        var listadoRec = {
+                        var listadoObs = {
                             apeNom: '',
                             concepto: '',
                             fecha: '',
@@ -589,22 +589,22 @@ class BuscarNuevo extends React.Component {
                         }
 
 
-                        listadoRec.apeNom = Observacion[i].apeNom;
-                        listadoRec.concepto = Observacion[i].concepto;
-                        listadoRec.fecha = Observacion[i].fecha;
-                        listadoRec.id_rec = Observacion[i].id_rec;
-                        listadoRec.numero = Observacion[i].numero;
-                        listadoRec.observacion = Observacion[i].observacion;
-                        listadoRec.idAlum = Observacion[i].id_alum;
-                            listadoRec.moneda = 'SOL';
-                        listadoRec.importe = 'S/' + Observacion[i].importe;
-                        listadoRec.estado = observacion_estado;
-                        listadoRec.codAlumno = Observacion[i].codAlumno;
-                        listadoRec.programa = Observacion[i].programa;
+                        listadoObs.apeNom = Observacion[i].apeNom;
+                        listadoObs.concepto = Observacion[i].concepto;
+                        listadoObs.fecha = Observacion[i].fecha;
+                        listadoObs.id_rec = Observacion[i].id_rec;
+                        listadoObs.numero = Observacion[i].numero;
+                        listadoObs.observacion = Observacion[i].observacion;
+                        listadoObs.idAlum = Observacion[i].id_alum;
+                        listadoObs.moneda = 'SOL';
+                        listadoObs.importe = 'S/' + Observacion[i].importe;
+                        listadoObs.estado = observacion_estado;
+                        listadoObs.codAlumno = Observacion[i].codAlumno;
+                        listadoObs.programa = Observacion[i].programa;
 
                       
                           
-                        lista.push(listadoRec);
+                        lista.push(listadoObs);
 
                     }
 
