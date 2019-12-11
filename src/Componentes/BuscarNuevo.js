@@ -421,7 +421,7 @@ class BuscarNuevo extends React.Component {
                     return response.json();
                 })
                 .then((pendienteAsignacion) => {
-                    console.log("---PendienteAsignacion---");
+                    console.log(CONFIG + '/recaudaciones/listarPendientes/' + fechaInicio + '/' + fechaFin);
                     console.log(pendienteAsignacion);
                     
 
