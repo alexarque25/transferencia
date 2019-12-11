@@ -75,6 +75,7 @@ class BuscarNuevo extends React.Component {
             nomProg: '',
 
             buscarPendiente: false,
+            buscarTransferencia: false,
         }
 
         this.handleChange = this.handleChange.bind(this);
@@ -397,6 +398,7 @@ class BuscarNuevo extends React.Component {
                 ObjAsignación: [],
                 posgradoB: true,
                 buscarPendiente: true,
+                buscarTransferencia: false,
                 buscarRecAlum: false,
                 buscarRec: false,
                 asignarRec: false,
@@ -622,7 +624,7 @@ class BuscarNuevo extends React.Component {
                 })
                 .catch((error) => {
                     this.setState({
-                        buscarObservacion: false
+                        buscarTransferencia: false
                     });
                     console.log(error);
                 })
