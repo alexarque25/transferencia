@@ -36,11 +36,12 @@ class BuscarNuevo extends React.Component {
 
             objPendienteAsignacion: [],
             objTransferencia: [],
-
+            objObservacion: [],
             buscarRecAlum: false,
             buscarRec: false,
             asignarRec: false,
             buscarTransferencia: false,
+            transf: false;
  
 
             mostrarResultadoAlumnos: false,
@@ -75,7 +76,7 @@ class BuscarNuevo extends React.Component {
             nomProg: '',
 
             buscarPendiente: false,
-            buscarTransferencia: false,
+            
         }
 
         this.handleChange = this.handleChange.bind(this);
@@ -160,7 +161,8 @@ class BuscarNuevo extends React.Component {
                 nomB: false,
                 recB: false,
                 buscarRecAlum: false,
-                posgradoB: true,
+                posgradoB: false,
+                transf: true,
                 buscarRec: false,
                 asignarRec: false,
                 buscarPendiente: false,
@@ -190,6 +192,7 @@ class BuscarNuevo extends React.Component {
                 objRecaudaciones: [],
                 objAlumnos: [],
                 ObjAsignación: [],
+                
                 buscarRec: false,
                 asignarRec: false,
                 mostrarResultadoAlumnos: false,
@@ -420,7 +423,7 @@ class BuscarNuevo extends React.Component {
                 .then((pendienteAsignacion) => {
                     console.log("---PendienteAsignacion---");
                     console.log(pendienteAsignacion);
-
+                    
 
                     var lista = [];
                     for (let i = 0; i < pendienteAsignacion.length; i++) {
@@ -936,6 +939,7 @@ class BuscarNuevo extends React.Component {
                         ) : (null)}
                     </div>
                 ) : (null)}
+
                 {this.state.posgradoB ? (
                     <div>
                         <form>
@@ -961,7 +965,43 @@ class BuscarNuevo extends React.Component {
                             </div>
                         ) : (null)}
                     </div>
+
                 ) : (null)}
+
+                {this.state.transf ? (
+                    <div>
+                        <form>
+                            <div className="SplitPane row">
+                                <div className="col-xs-3 margen2">
+                                    <input ref={(input) => this.fechaInicio = input} type="date" maxLength="100" placeholder="Fecha de Inicio" />
+                                </div>
+                                <div className="col-xs-3 margen2">
+                                    <input ref={(input) => this.fechaFin = input} type="date" maxLength="100" placeholder="Fecha de Fin" />
+                                </div>
+                                <div className="col-xs-2 margen2">
+                                    <button className="waves-effect waves-light btn-large center" type="submit" onClick={this.onSubmitTransferencia}>
+                                        Buscar
+                                        <i className="large material-icons left">search</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+                        {this.state.buscarPendiente ? (
+                            <div>
+                                <AR_Transferencia listTransferencia={this.state.objTransferencia} />
+                            </div>
+                        ) : (null)}
+                    </div>
+
+                ) : (null)}
+
+
+
+
+
+
+
                 <hr />
                 {this.state.asignarRec ? (
                     <div>
