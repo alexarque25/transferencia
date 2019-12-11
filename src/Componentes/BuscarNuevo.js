@@ -14,8 +14,7 @@ import AR_PendienteAsignacion from './AR_PendienteAsignacion';
 const opciones = [
     { value: 'Búsqueda por nombre', label: 'Búsqueda por nombre' },
     { value: 'Búsqueda por recibo', label: 'Búsqueda por recibo' },
-    { value: 'Pendiente de asignación', label: 'Pendiente de asignación' },
-    { value: 'Transferencia', label: 'Transferencia' }
+    { value: 'Pendiente de asignación', label: 'Pendiente de asignación' }
 ];
 
 class BuscarNuevo extends React.Component {
@@ -130,22 +129,7 @@ class BuscarNuevo extends React.Component {
                 mostrarResultadoAlumnos: false,
             });
             this.props.flag(false);
-        }
-        else if (selectedOption.value == 'Pendiente de asignación') {
-            this.setState({
-                value: selectedOption,
-                nomB: false,
-                recB: false,
-                buscarRecAlum: false,
-                posgradoB: true,
-                buscarRec: false,
-                asignarRec: false,
-                buscarPendiente: false,
-                mostrarResultadoAlumnos: false,
-            });
-            this.props.flag(false);
-        }
-        else if (selectedOption.value == 'Transferencia') {
+        } else if (selectedOption.value == 'Pendiente de asignación') {
             this.setState({
                 value: selectedOption,
                 nomB: false,
@@ -379,7 +363,7 @@ class BuscarNuevo extends React.Component {
         var fechaFin = this.fechaFin.value;
 
         if (!fechaInicio && !fechaFin) {
-            swal("Ingrese la fecha a buscar", " ", "info");
+            swal("Ingrese lafecha a buscar", " ", "info");
         } else {
             this.setState({
                 objRecaudaciones: [],
@@ -492,7 +476,7 @@ class BuscarNuevo extends React.Component {
                         this.setState({
                             buscarPendiente: false
                         });
-                        swal("No existe en ese rango de fecha", " ", "info")
+                        swal("No hay pendientes por asignación", " ", "info")
                     }
                 })
                 .catch((error) => {
