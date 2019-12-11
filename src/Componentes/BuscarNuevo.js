@@ -41,7 +41,7 @@ class BuscarNuevo extends React.Component {
             buscarRec: false,
             asignarRec: false,
             buscarTransferencia: false,
-            transf: false;
+            transf: false,
  
 
             mostrarResultadoAlumnos: false,
