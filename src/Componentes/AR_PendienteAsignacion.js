@@ -28,8 +28,8 @@ class AR_PendienteAsignacion extends React.Component {
                                         <td className="td1">{recaudaciones.concepto}</td>
                                         <td className="td1">{recaudaciones.numero}</td>
                                         <td className="td1">{recaudaciones.moneda}</td>
-                                        <td className="td1">{recaudaciones.fecha}</td>
                                         <td className="td1">{recaudaciones.importe}</td>
+                                        <td className="td1">{recaudaciones.fecha}</td>
                                         <td className="td1">{recaudaciones.observacion}</td>
                                         
                                         
