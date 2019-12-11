@@ -584,18 +584,18 @@ class BuscarNuevo extends React.Component {
                         }
 
 
-                            listadoRec.apeNom = pendienteAsignacion[i].apeNom;
-                            listadoRec.concepto = pendienteAsignacion[i].concepto;
-                            listadoRec.fecha = pendienteAsignacion[i].fecha;
-                            listadoRec.id_rec = pendienteAsignacion[i].id_rec;
-                            listadoRec.numero = pendienteAsignacion[i].numero;
-                            listadoRec.observacion = pendienteAsignacion[i].observacion;
-                            listadoRec.idAlum = pendienteAsignacion[i].id_alum;
+                        listadoRec.apeNom = Observacion[i].apeNom;
+                        listadoRec.concepto = Observacion[i].concepto;
+                        listadoRec.fecha = Observacion[i].fecha;
+                        listadoRec.id_rec = Observacion[i].id_rec;
+                        listadoRec.numero = Observacion[i].numero;
+                        listadoRec.observacion = Observacion[i].observacion;
+                        listadoRec.idAlum = Observacion[i].id_alum;
                             listadoRec.moneda = 'SOL';
-                            listadoRec.importe = 'S/' + pendienteAsignacion[i].importe;
-                            listadoRec.estado = pendiente_estado;
-                            listadoRec.codAlumno = pendienteAsignacion[i].codAlumno;
-                            listadoRec.programa = pendienteAsignacion[i].programa;
+                        listadoRec.importe = 'S/' + Observacion[i].importe;
+                        listadoRec.estado = observacion_estado;
+                        listadoRec.codAlumno = Observacion[i].codAlumno;
+                        listadoRec.programa = Observacion[i].programa;
 
                       
                           
