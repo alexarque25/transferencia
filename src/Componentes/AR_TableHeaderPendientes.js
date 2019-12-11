@@ -11,11 +11,10 @@ class AR_tableHeaderPendientes extends React.Component {
             <thead>
                 <tr>
                     <th className="th">Nro</th>
-                    <th className="th">Nombre Apellido</th>
                     <th className="th">Observacion</th>
     
                     <th className="th">Fecha</th>                    
-                    
+                    </tr>   
             </thead>
         )
     }
