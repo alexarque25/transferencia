@@ -965,7 +965,7 @@ class BuscarNuevo extends React.Component {
 
                         {this.state.buscarPendiente ? (
                             <div>
-                                <AR_PendienteAsignacion listPendienteAsignacion={this.state.objPendienteAsignacion} />
+                                <AR_Transferencias listPendienteAsignacion={this.state.objPendienteAsignacion} />
                             </div>
                         ) : (null)}
                     </div>
