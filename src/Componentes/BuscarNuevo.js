@@ -530,6 +530,7 @@ class BuscarNuevo extends React.Component {
         } else {
             this.setState({
                 objRecaudaciones: [],
+
                 objAlumnos: [],
                 ObjAsignación: [],
                 posgradoB: true,
@@ -553,13 +554,13 @@ class BuscarNuevo extends React.Component {
                 .then((response) => {
                     return response.json();
                 })
-                .then((pendienteAsignacion) => {
-                    console.log("---PendienteAsignacion---");
-                    console.log(pendienteAsignacion);
+                .then((Observacion) => {
+                    console.log("---Observacion---");
+                    console.log(Observacion);
 
 
                     var lista = [];
-                    for (let i = 0; i < pendienteAsignacion.length; i++) {
+                    for (let i = 0; i < Observacion.length; i++) {
                         var listadoRec = {
                             apeNom: '',
                             concepto: '',
@@ -575,14 +576,13 @@ class BuscarNuevo extends React.Component {
                             programa: ''
                         }
 
-                        let pendiente_estado;
-                        if (pendienteAsignacion[i].codAlumno != null) {
-                            pendiente_estado = "true";
+                        let observacion_estado;
+                        if (Observacion[i].observacion != null) {
+                            observacion_estado = "true";
                         } else {
-                            pendiente_estado = "false";
+                            observacion_estado = "false";
                         }
 
-                        if (pendienteAsignacion[i].moneda == '108') {
 
                             listadoRec.apeNom = pendienteAsignacion[i].apeNom;
                             listadoRec.concepto = pendienteAsignacion[i].concepto;
@@ -597,60 +597,32 @@ class BuscarNuevo extends React.Component {
                             listadoRec.codAlumno = pendienteAsignacion[i].codAlumno;
                             listadoRec.programa = pendienteAsignacion[i].programa;
 
-                        } else if (pendienteAsignacion[i].moneda == '113') {
-
-                            listadoRec.apeNom = pendienteAsignacion[i].apeNom;
-                            listadoRec.concepto = pendienteAsignacion[i].concepto;
-                            listadoRec.fecha = pendienteAsignacion[i].fecha;
-                            listadoRec.observacion = pendienteAsignacion[i].observacion;
-                            listadoRec.id_rec = pendienteAsignacion[i].id_rec;
-                            listadoRec.numero = pendienteAsignacion[i].numero;
-                            listadoRec.idAlum = pendienteAsignacion[i].id_alum;
-                            listadoRec.moneda = 'DOL';
-                            listadoRec.importe = '$ ' + pendienteAsignacion[i].importe;
-                            listadoRec.estado = pendiente_estado;
-                            listadoRec.codAlumno = pendienteAsignacion[i].codAlumno;
-                            listadoRec.programa = pendienteAsignacion[i].programa;
-
-                        } else {
-
-                            listadoRec.apeNom = pendienteAsignacion[i].apeNom;
-                            listadoRec.concepto = pendienteAsignacion[i].concepto;
-                            listadoRec.fecha = pendienteAsignacion[i].fecha;
-                            listadoRec.observacion = pendienteAsignacion[i].observacion;
-                            listadoRec.id_rec = pendienteAsignacion[i].id_rec;
-                            listadoRec.numero = pendienteAsignacion[i].numero;
-                            listadoRec.idAlum = pendienteAsignacion[i].id_alum;
-                            listadoRec.moneda = ' ';
-                            listadoRec.importe = pendienteAsignacion[i].importe;
-                            listadoRec.estado = pendiente_estado;
-                            listadoRec.codAlumno = pendienteAsignacion[i].codAlumno;
-                            listadoRec.programa = pendienteAsignacion[i].programa;
-                        }
+                      
+                          
                         lista.push(listadoRec);
 
                     }
 
                     this.setState({
-                        objPendienteAsignacion: lista,
+                        objObservacion: lista,
                     })
-                    console.log("---ObjPendienteAsignacion---");
-                    console.log(this.state.objPendienteAsignacion);
-                    if (this.state.objPendienteAsignacion.length > 0) {
+                    console.log("---ObjObservacion---");
+                    console.log(this.state.objObservacion);
+                    if (this.state.objObservacion.length > 0) {
                         this.setState({
                             buscarPendiente: true
                         });
                         swal("Consulta realizada exitosamente", " ", "success");
                     } else {
                         this.setState({
-                            buscarPendiente: false
+                            buscarObservacion: false
                         });
                         swal("No hay observaciones", " ", "info")
                     }
                 })
                 .catch((error) => {
                     this.setState({
-                        buscarPendiente: false
+                        buscarObservacion: false
                     });
                     console.log(error);
                 })
