@@ -9,7 +9,7 @@ class AR_Transferencia extends React.Component {
         super(props);
 
         this.state = {
-            objPendienteAsignacion: this.props.listPendienteAsignacion,
+            objTransferencia: this.props.listTransferencia,
         }
     }
 
@@ -17,10 +17,10 @@ class AR_Transferencia extends React.Component {
         return (
             <div>
                 <table className="table">
-                    <AR_tableHeaderPendientes />
+                    <AR_tableHeaderTransferencia />
                     <tbody>
                         {
-                            this.props.listPendienteAsignacion.map((recaudaciones, key) => {
+                            this.props.listTransferencia.map((recaudaciones, key) => {
                                 return (
                                     <tr>
                                         <td className="td1">{key + 1}</td>

@@ -810,6 +810,7 @@ class BuscarNuevo extends React.Component {
                                             <td className="td1">{this.state.detalleRecaudaciones.moneda}</td>
                                             <td className="td1">{this.state.detalleRecaudaciones.importe}</td>
                                             <td className="td1">{this.state.detalleRecaudaciones.fecha}</td>
+                                            <td className="td1">{this.state.detalleRecaudaciones.observacion}</td>
 
                                             <td className="td1">
                                                 <AR_CodigoAsignacion codAlum={this.state.detalleRecaudaciones.codAlumno} />
@@ -895,6 +896,7 @@ class BuscarNuevo extends React.Component {
                                             <td className="td1">{this.state.detalleRecaudaciones.moneda}</td>
                                             <td className="td1">{this.state.detalleRecaudaciones.importe}</td>
                                             <td className="td1">{this.state.detalleRecaudaciones.fecha}</td>
+                                            <td className="td1">{this.state.detalleRecaudaciones.observacion}</td>
 
                                             <td className="td1">
                                                 <AR_CodigoAsignacion codAlum={this.state.detalleRecaudaciones.codAlumno} />
