@@ -1,8 +1,7 @@
 // JavaScript source code
 import React from 'react'
 import Select from 'react-select'
-import AR_tableHeaderPendientes from './AR_TableHeaderPendientes';
-import AR_EstadoAsignacion from './AR_EstadoAsginacion';
+import AR_tableHeaderPendientes from './AR_TableHeaderTransferencia';
 
 class AR_PendienteAsignacion extends React.Component {
 

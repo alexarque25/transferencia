@@ -10,6 +10,7 @@ import AR_ReciboResultadoAlumnos from './AR_ReciboResultadoAlumnos'
 import AR_EstadoAsignacion from './AR_EstadoAsginacion'
 import AR_ProgramaAsignacion from './AR_ProgramaAsignacion'
 import AR_PendienteAsignacion from './AR_PendienteAsignacion';
+import AR_Transferencia from './AR_Transferencia';
 
 const opciones = [
     { value: 'Búsqueda por nombre', label: 'Búsqueda por nombre' },
@@ -965,7 +966,7 @@ class BuscarNuevo extends React.Component {
 
                         {this.state.buscarPendiente ? (
                             <div>
-                                <AR_Transferencias listPendienteAsignacion={this.state.objPendienteAsignacion} />
+                                <AR_Transferencia listPendienteAsignacion={this.state.objPendienteAsignacion} />
                             </div>
                         ) : (null)}
                     </div>
