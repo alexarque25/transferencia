@@ -14,7 +14,7 @@ import AR_PendienteAsignacion from './AR_PendienteAsignacion';
 const opciones = [
     { value: 'Búsqueda por nombre', label: 'Búsqueda por nombre' },
     { value: 'Búsqueda por recibo', label: 'Búsqueda por recibo' },
-    { value: 'Pendiente de asignación', label: 'Pendiente de asignación' }
+    { value: 'Pendiente de asignación', label: 'Pendiente de asignación' },
     { value: 'Transferencia', label: 'Transferencia' }
 ];
 
