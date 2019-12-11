@@ -20,7 +20,7 @@ class AR_Transferencia extends React.Component {
                     <AR_tableHeaderTransferencia />
                     <tbody>
                         {
-                            this.props.listTransferencia.map((recaudaciones, key) => {
+                            this.props.listObservacion.map((recaudaciones, key) => {
                                 return (
                                     <tr>
                                         <td className="td1">{key + 1}</td>
