@@ -963,7 +963,7 @@ class BuscarNuevo extends React.Component {
                             </div>
                         </form>
 
-                        {this.state.buscarTransferencia ? (
+                        {this.state.buscarPendiente ? (
                             <div>
                                 <AR_PendienteAsignacion listPendienteAsignacion={this.state.objPendienteAsignacion} />
                             </div>
@@ -991,7 +991,7 @@ class BuscarNuevo extends React.Component {
                             </div>
                         </form>
 
-                        {this.state.buscarPendiente ? (
+                        {this.state.buscarTransferencia ? (
                             <div>
                                 <AR_Transferencia listObservacion={this.state.objObservacion} />
                             </div>
