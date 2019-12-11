@@ -615,12 +615,12 @@ class BuscarNuevo extends React.Component {
                     console.log(this.state.objObservacion);
                     if (this.state.objObservacion.length > 0) {
                         this.setState({
-                            buscarPendiente: true
+                            buscarTransferencia: true
                         });
                         swal("Consulta realizada exitosamente", " ", "success");
                     } else {
                         this.setState({
-                            buscarObservacion: false
+                            buscarTransferencia: false
                         });
                         swal("No hay observaciones", " ", "info")
                     }
