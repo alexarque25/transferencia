@@ -3,7 +3,7 @@ import React from 'react'
 import Select from 'react-select'
 import AR_tableHeaderPendientes from './AR_TableHeaderTransferencia';
 
-class AR_PendienteAsignacion extends React.Component {
+class AR_Transferencia extends React.Component {
 
     constructor(props) {
         super(props);
@@ -38,4 +38,4 @@ class AR_PendienteAsignacion extends React.Component {
     }
 
 }
-export default AR_PendienteAsignacion
+export default AR_Transferencia

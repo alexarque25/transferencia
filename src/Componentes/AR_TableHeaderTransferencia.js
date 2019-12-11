@@ -1,6 +1,6 @@
 import React from 'react'
 
-class AR_tableHeaderPendientes extends React.Component {
+class AR_tableHeaderTransferencia extends React.Component {
 
     constructor (props) {
         super(props);
@@ -19,4 +19,4 @@ class AR_tableHeaderPendientes extends React.Component {
     }
 
 }
-export default AR_tableHeaderPendientes
+export default AR_tableHeaderTransferencia
