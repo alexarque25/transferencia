@@ -1,7 +1,7 @@
 // JavaScript source code
 import React from 'react'
 import Select from 'react-select'
-import AR_tableHeaderPendientes from './AR_TableHeaderTransferencia';
+import AR_tableHeaderTransferencia from './AR_TableHeaderTransferencia';
 
 class AR_Transferencia extends React.Component {
 
