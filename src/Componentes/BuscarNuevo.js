@@ -40,6 +40,8 @@ class BuscarNuevo extends React.Component {
             buscarRecAlum: false,
             buscarRec: false,
             asignarRec: false,
+            buscarTransferencia: false,
+ 
 
             mostrarResultadoAlumnos: false,
 
@@ -117,6 +119,7 @@ class BuscarNuevo extends React.Component {
                 buscarRec: false,
                 asignarRec: false,
                 buscarPendiente: false,
+                buscarTransferencia: false,
                 mostrarResultadoAlumnos: false,
             });
             this.props.flag(false);
@@ -130,6 +133,7 @@ class BuscarNuevo extends React.Component {
                 buscarRec: false,
                 asignarRec: false,
                 buscarPendiente: false,
+                buscarTransferencia: false,
                 mostrarResultadoAlumnos: false,
             });
             this.props.flag(false);
@@ -143,6 +147,7 @@ class BuscarNuevo extends React.Component {
                 buscarRec: false,
                 asignarRec: false,
                 buscarPendiente: false,
+                buscarTransferencia: false,
                 mostrarResultadoAlumnos: false,
             });
             this.props.flag(false);
@@ -158,6 +163,7 @@ class BuscarNuevo extends React.Component {
                 buscarRec: false,
                 asignarRec: false,
                 buscarPendiente: false,
+                buscarTransferencia: false,
                 mostrarResultadoAlumnos: false,
             });
             this.props.flag(false);
@@ -515,7 +521,7 @@ class BuscarNuevo extends React.Component {
         e.preventDefault();
     }
 
-    onSubmitTransferencia = (e) => {
+    onSubmitTransferencia = (e) => {  /* an */
         var fechaInicio = this.fechaInicio.value;
         var fechaFin = this.fechaFin.value;
 
@@ -527,7 +533,8 @@ class BuscarNuevo extends React.Component {
                 objAlumnos: [],
                 ObjAsignación: [],
                 posgradoB: true,
-                buscarPendiente: true,
+                buscarPendiente: false,
+                buscarTransferencia: true,
                 buscarRecAlum: false,
                 buscarRec: false,
                 asignarRec: false,
@@ -542,7 +549,7 @@ class BuscarNuevo extends React.Component {
                 observacion: '',
             })
 
-            fetch(CONFIG + '/recaudaciones/listarPendientes/' + fechaInicio + '/' + fechaFin)/*PONER PARAMETROS LAS FECHAS Y LISTO*/
+            fetch(CONFIG + '/recaudaciones/listarObservaciones/' + fechaInicio + '/' + fechaFin)/*PONER PARAMETROS LAS FECHAS Y LISTO*/
                 .then((response) => {
                     return response.json();
                 })
@@ -638,7 +645,7 @@ class BuscarNuevo extends React.Component {
                         this.setState({
                             buscarPendiente: false
                         });
-                        swal("No hay pendientes por asignación", " ", "info")
+                        swal("No hay observaciones", " ", "info")
                     }
                 })
                 .catch((error) => {
@@ -652,7 +659,7 @@ class BuscarNuevo extends React.Component {
         e.preventDefault();
     }
 
-    getDetalleTransferencia = (objRec) => {
+    getDetalleTransferencia = (objRec) => { /* an */
         let objRecibo_estado;
         if (objRec[0].codAlum != null) {
             objRecibo_estado = "true";
