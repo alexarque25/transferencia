@@ -11,6 +11,7 @@ class AR_tableHeaderTransferencia extends React.Component {
             <thead>
                 <tr>
                     <th className="th">Nro</th>
+                    <th className="th">Concepto</th>
                     <th className="th">Observacion</th>
                     <th className="th">Fecha</th>                    
                 </tr>

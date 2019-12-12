@@ -24,6 +24,7 @@ class AR_Transferencia extends React.Component {
                                 return (
                                     <tr>
                                         <td className="td1">{key + 1}</td>
+                                        <td className="td1">{recaudaciones.concepto}</td>
                                         <td className="td1">{recaudaciones.observacion}</td>
                                         <td className="td1">{recaudaciones.fecha}</td>
 
